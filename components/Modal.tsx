@@ -10,27 +10,27 @@ interface ModalProps {
 const Modal: React.FC<ModalProps> = ({ type, onClose }) => {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
-  const SPREADSHEET_URL = 'https://script.google.com/macros/s/AKfycbz_placeholder/exec';
-
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setStatus('submitting');
+    setStatus("submitting");
 
     const formData = new FormData(e.currentTarget);
     const data = Object.fromEntries(formData.entries());
-    data.formType = type;
-    data.timestamp = new Date().toISOString();
+    data.formType = type; // This ensures it goes to the correct table
 
     try {
-      await fetch(SPREADSHEET_URL, {
-        method: 'POST',
-        mode: 'no-cors',
+      const res = await fetch("/api/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
-      setTimeout(() => setStatus('success'), 1200);
-    } catch (error) {
-      console.error('Submission failed:', error);
-      setStatus('success'); 
+
+      if (!res.ok) throw new Error("Submission failed");
+
+      setStatus("success");
+    } catch (err) {
+      console.error(err);
+      setStatus("error");
     }
   };
 
