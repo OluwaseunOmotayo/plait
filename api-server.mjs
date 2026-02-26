@@ -43,6 +43,7 @@ const tableMap = {
   USER_WAITLIST: "user_waitlist",
   STYLIST_WAITLIST: "stylist_waitlist",
   NOMINATE: "nominations",
+  CONTACT: "contact_submissions",
 };
 
 /** Convert camelCase keys to snake_case for Supabase column names */
