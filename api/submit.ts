@@ -18,7 +18,8 @@ const supabase =
 export enum FormType {
   USER_WAITLIST = "USER_WAITLIST",
   STYLIST_WAITLIST = "STYLIST_WAITLIST",
-  NOMINATE = "NOMINATE"
+  NOMINATE = "NOMINATE",
+  CONTACT = "CONTACT"
 }
 
 // Generic form data type — can extend per modal if needed
@@ -32,7 +33,8 @@ export interface BaseFormData {
 const tableMap: Record<FormType, string> = {
   [FormType.USER_WAITLIST]: "user_waitlist",
   [FormType.STYLIST_WAITLIST]: "stylist_waitlist",
-  [FormType.NOMINATE]: "nominations"
+  [FormType.NOMINATE]: "nominations",
+  [FormType.CONTACT]: "contact_submissions"
 };
 
 /** Convert camelCase keys to snake_case for Supabase column names */

@@ -5,13 +5,13 @@ const Features: React.FC = () => {
   return (
     <section className="py-24 px-6 bg-background-light dark:bg-[#0D0B0A]">
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-center lg:gap-16">
-        
+
         {/* Mobile Mockup - Matching the Screenshot */}
         <div className="relative flex justify-center mb-16 lg:mb-0 shrink-0">
           <div className="relative w-[300px] h-[700px] bg-black rounded-[3rem] border-[10px] border-slate-900 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] overflow-hidden">
             {/* Mockup Screen Content */}
             <div className="h-full w-full bg-[#EAE6DB] flex flex-col font-sans select-none">
-              
+
               {/* Top Navigation / Progress Bar */}
               <div className="pt-8 px-8 flex justify-center gap-1.5 mb-6">
                 <div className="h-1.5 w-full bg-black/5 rounded-full"></div>
@@ -32,10 +32,10 @@ const Features: React.FC = () => {
                   {/* Photo Grid */}
                   <div className="grid grid-cols-3 h-[250px] gap-0.5">
                     <div className="col-span-2 relative">
-                      <img 
-                        alt="Hair Texture Example" 
-                        className="w-full h-full object-cover" 
-                        src="https://images.unsplash.com/photo-1632765854612-9b02b6ec2b15?q=80&w=986&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?auto=format&fit=crop&q=80&w=300" 
+                      <img
+                        alt="Hair Texture Example"
+                        className="w-full h-full object-cover"
+                        src="https://images.unsplash.com/photo-1632765854612-9b02b6ec2b15?q=80&w=986&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?auto=format&fit=crop&q=80&w=300"
                       />
                       <div className="absolute top-3 left-3 bg-black/50 backdrop-blur-md px-2 py-1 rounded-full flex items-center gap-1">
                         <span className="material-symbols-outlined text-white text-[10px]">location_on</span>
@@ -44,20 +44,20 @@ const Features: React.FC = () => {
                     </div>
                     <div className="col-span-1 flex flex-col gap-0.5">
                       <div className="h-1/2 relative">
-                        <img 
-                          alt="Tools" 
-                          className="w-full h-full object-cover" 
-                          src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&q=80&w=200" 
+                        <img
+                          alt="Tools"
+                          className="w-full h-full object-cover"
+                          src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&q=80&w=200"
                         />
                         <div className="absolute top-2 right-2 w-6 h-6 rounded-md bg-white/20 backdrop-blur-sm flex items-center justify-center">
                            <span className="material-symbols-outlined text-white text-[14px]">bookmark</span>
                         </div>
                       </div>
                       <div className="h-1/2 relative">
-                        <img 
-                          alt="Stylist Portfolio" 
-                          className="w-full h-full object-cover" 
-                          src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?auto=format&fit=crop&q=80&w=200" 
+                        <img
+                          alt="Stylist Portfolio"
+                          className="w-full h-full object-cover"
+                          src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?auto=format&fit=crop&q=80&w=200"
                         />
                         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                           <span className="text-white text-xs font-bold">+12</span>
@@ -124,7 +124,7 @@ const Features: React.FC = () => {
               </div>
             </div>
           </div>
-          
+
           {/* Decorative background glow behind phone */}
           <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary/10 blur-[80px] rounded-full"></div>
           <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-secondary/10 blur-[80px] rounded-full"></div>
@@ -132,27 +132,35 @@ const Features: React.FC = () => {
 
         {/* Feature List */}
         <div className="max-w-md lg:max-w-xl">
+          <p className="text-base text-slate-400 mb-6 text-center lg:text-left leading-relaxed">
+            PLAIT is a social beauty care app that makes the styling experience easier and more fun!
+          </p>
           <h2 className="font-display text-4xl md:text-5xl mb-10 leading-tight text-center lg:text-left text-[#12100E] dark:text-white">
-            The Art of Hair<br />
-            <span className="italic text-primary">In Your Pocket.</span>
+            Your Beauty<br />
+            <span className="italic text-primary">Community.</span>
           </h2>
-          
+
           <div className="space-y-10">
             {[
-              { 
-                icon: 'auto_awesome', 
-                title: 'Curated Discovery', 
-                desc: 'Find stylists who specialize in your specific hair texture and style needs. No more guesswork.' 
+              {
+                icon: 'rate_review',
+                title: 'Review Your Favorites',
+                desc: 'Rate and review your favorite stylists so others in your community can find them too.'
               },
-              { 
-                icon: 'verified_user', 
-                title: 'Vetted Professionals', 
-                desc: 'Every stylist on PLAIT is vetted for quality, professionalism, and hygiene standards.' 
+              {
+                icon: 'explore',
+                title: 'Track Your Experiences',
+                desc: 'Keep a record of your styling experiences throughout the city — every look, every visit.'
               },
-              { 
-                icon: 'event_available', 
-                title: 'Seamless Booking', 
-                desc: 'Book appointments, pay securely, and manage your hair journey all in one elegant interface.' 
+              {
+                icon: 'share',
+                title: 'Share With Your Community',
+                desc: 'Share your experiences with friends and your wider community. Word of mouth, amplified.'
+              },
+              {
+                icon: 'event_available',
+                title: 'Find & Book Near You',
+                desc: 'Discover and book stylists near you with real reviews from people who share your texture and style.'
               }
             ].map((f, i) => (
               <div key={i} className="flex gap-5 group">
